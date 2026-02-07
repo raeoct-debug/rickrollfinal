@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Google Drive</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    #content {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    img {
+      max-width: 90%;
+      max-height: 70vh;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 id="loading">Loading...</h1>
+
+  <div id="content">
+    <img src="foto.jpg">
+    <audio id="audio" loop>
+      <source src="lagu.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script>
+    document.body.addEventListener("click", () => {
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("content").style.display = "flex";
+      document.getElementById("audio").play();
+    });
+  </script>
+
+</body>
+</html>
